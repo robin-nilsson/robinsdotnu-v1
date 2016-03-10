@@ -1,8 +1,13 @@
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 
+.center {
+	text-align: center;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-flatly";
 @import "font-awesome";
 @import "pages";
 @import "navbar";
+@import "index";
