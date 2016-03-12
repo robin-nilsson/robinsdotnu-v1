@@ -4,6 +4,10 @@ $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-ser
 	text-align: center;
 }
 
+.vertical-center {
+	margin-top: 25%;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-flatly";
