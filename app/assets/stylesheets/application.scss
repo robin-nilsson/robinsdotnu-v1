@@ -1,11 +1,15 @@
 $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 
+#main-content {
+	margin-top: 5em;
+}
+
 .center {
 	text-align: center;
 }
 
 .vertical-center {
-	margin-top: 25%;
+	margin-top: 14.5%;
 }
 
 @import "bootstrap-sprockets";
@@ -15,3 +19,4 @@ $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-ser
 @import "pages";
 @import "navbar";
 @import "index";
+@import "messages";

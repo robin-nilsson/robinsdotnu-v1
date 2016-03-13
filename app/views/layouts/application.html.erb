@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>RobinsdotnuV1</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>RobinsdotnuV1</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-<%= render "layouts/menu" %>
-<div id="main" class="container-fluid">
-	<div>
-		<%= yield %>
+	<%= render "layouts/menu" %>
+	<div id="main" class="container-fluid">
+		<div class='text-center'>
+			<%= flash_messages %>
+		</div>
+		<div id="main-content">
+			<%= yield %>
+		</div>
 	</div>
-</div>
 
 </body>
 </html>

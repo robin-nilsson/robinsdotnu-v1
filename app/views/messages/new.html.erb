@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <div class="contact">
+      <p>Got something interesting to tell me?</p>
+      <p>I'm looking forward to get in touch with you!</p><br>
+      <div>
+        <%= form_for @message, url: contact_path do |message_form| %>
+        <div class="row">
+          <div class="form-group col-lg-5">
+            <%= message_form.text_field :name, placeholder: "Name", required: true, pattern: ".{3,30}", title: "Minimum 3 characters, maximum 30 characters.", class: "form-control" %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-lg-5">
+            <%= message_form.email_field :email, placeholder: "Email", required: true, class: "form-control"%>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= message_form.text_area :content, placeholder: "Message", cols: 80, rows: 6, required: true, pattern: ".{5,1024}", title: "Minimum 5 characters, maximum 1024 characters.", class: "form-control" %>
+        </div>
+        <i>* 1024 characters maximum.</i><br><br>
+        <div class="form-group">
+          <%= message_form.submit "Send", class: "btn btn-success" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
