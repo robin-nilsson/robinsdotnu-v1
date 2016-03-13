@@ -2,11 +2,6 @@ $navbar-background-color: #2C3E50;
 $navbar-background-hover-color: #22313F;
 $nav-link-hover-bg: $navbar-background-hover-color;
 
-.navbar-toggle {
-	background-color: white !important;
-	border-color: white !important;
-}
-
 #menu {
 	background-color: $navbar-background-color;
 	height: 5em;
@@ -24,7 +19,7 @@ $nav-link-hover-bg: $navbar-background-hover-color;
 		font-weight: bold;
 		&.active {
 			a {
-				background-color: $navbar-background-color;
+				background-color: $navbar-background-hover-color;
 			}
 		}
 	}
@@ -33,26 +28,6 @@ $nav-link-hover-bg: $navbar-background-hover-color;
 		color: white;
 		&.active {
 			background-color: $navbar-background-hover-color;
-		}
-	}
-
-	.visible-xs {
-		background-color: $navbar-background-color;
-	}
-
-	.navbar-header {
-		background-color: $navbar-background-color;
-	}
-
-	#small-nav {
-		background-color: $navbar-background-color;
-		ul {
-			text-align: center !important;
-			width: 90% !important;
-			margin-left: 1.75em !important;
-			li {
-				display: block;
-			}
 		}
 	}
 }

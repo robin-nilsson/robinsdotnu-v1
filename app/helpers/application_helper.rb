@@ -16,4 +16,9 @@ module ApplicationHelper
     end
     nil
   end
+
+  # Add active class to menu item clicked.
+  def is_active(action)       
+    params[:action] == action ? "active" : nil        
+  end
 end
