@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post 'contact', to: 'messages#create'
 
   resources :posts
+  get 'tags/:tag', to: 'posts#index', as: :tag
 end

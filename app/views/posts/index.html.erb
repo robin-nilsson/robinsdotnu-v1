@@ -1,9 +1,14 @@
 <div class="text-center posts-wrapper">
 	<% @posts.each do |post| %>
-		<div class="posts-wrapper">
-			<h2 class="posts-title"><%= link_to post.title, post %></h2>
-			<p class="posts-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-			<text class="body-index"><%= raw post.body.truncate(250) %></text>
-		</div>
+	<div class="posts-wrapper">
+		<h2 class="posts-title"><%= link_to post.title, post %></h2>
+		<p class='tags'>
+		<% if post.tags.any? %>
+			Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+		<% end %>
+		</p>
+		<p class="posts-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+		<text class="body-index"><%= raw post.body.truncate(250) %></text>
+	</div>
 	<% end %>
 </div>
