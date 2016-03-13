@@ -4,7 +4,10 @@ $nav-link-hover-bg: $navbar-background-hover-color;
 
 #menu {
 	background-color: $navbar-background-color;
-	height: 5em;
+	height: 4em;
+	font-family: Lato !important;
+	font-size: 16px;
+	font-weight: 800;
 
 	ul {
 		margin-right: 3em;
@@ -15,7 +18,7 @@ $nav-link-hover-bg: $navbar-background-hover-color;
 	li {
 		float: none;
 		display: inline-block;
-		margin-top: 1em;
+		margin-top: 0.6em;
 		font-weight: bold;
 		&.active {
 			a {

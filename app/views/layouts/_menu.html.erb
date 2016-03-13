@@ -1,15 +1,17 @@
 <nav id='menu' class='navbar navbar-inverse'>
   <div class='container-fluid'>
-    <ul class='nav nav-pills navbar-right'>
-      <li class="<%=is_active('index')%>">
-        <%= link_to 'Me', root_path, class: 'nav-link' %>
-      </li>
-      <li class="<%=is_active('new')%>">
-        <%= link_to 'Contact', contact_path, class: 'nav-link' %>
-      </li>
-      <li class="<%=is_active('#')%>">
-        <%= link_to 'Blog', '#', class: 'nav-link' %>
-      </li>
-    </ul>
+    <div class="row">
+    <ul class='nav nav-pills navbar-right text-center'>
+        <li class="<%=is_active('index')%>">
+          <%= link_to 'Me', root_path, class: 'nav-link' %>
+        </li>
+        <li class="<%=is_active('new')%>">
+          <%= link_to 'Contact', contact_path, class: 'nav-link' %>
+        </li>
+        <li class="<%=is_active('#')%>">
+          <%= link_to 'Blog', '#', class: 'nav-link' %>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

@@ -1,4 +1,6 @@
-$font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+body {
+	font-family: 'Raleway', Lato !important;
+}
 
 #main-content {
 	margin-top: 5em;
@@ -15,6 +17,7 @@ $font-family-sans-serif: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-ser
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-flatly";
+@import "normalize";
 @import "font-awesome";
 @import "pages";
 @import "navbar";
