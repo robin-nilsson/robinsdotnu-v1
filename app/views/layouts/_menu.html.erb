@@ -2,13 +2,13 @@
   <div class='container-fluid'>
     <div class="row">
     <ul class='nav nav-pills navbar-right text-center'>
-        <li class="<%=is_active('index')%>">
+        <li class="<%= active_class(root_path) %>">
           <%= link_to 'Me', root_path, class: 'nav-link' %>
         </li>
-        <li class="<%=is_active('new')%>">
+        <li class="<%= active_class(contact_path) %>">
           <%= link_to 'Contact', contact_path, class: 'nav-link' %>
         </li>
-        <li class="<%=is_active('#')%>">
+        <li class="<%= active_class(posts_path) %>">
           <%= link_to 'Blog', posts_path, class: 'nav-link' %>
         </li>
       </ul>

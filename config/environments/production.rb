@@ -79,6 +79,7 @@ Rails.application.configure do
 
   # Mailer information.
   Rails.application.routes.default_url_options[:host] = 'robins.nu'
+  config.action_mailer.default_url_options = { :host => 'robins.nu' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true

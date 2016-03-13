@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   # Add active class to menu item clicked.
-  def is_active(action)       
-    params[:action] == action ? "active" : nil        
+  def active_class(link_path)
+    current_page?(link_path) ? 'active' : ""
   end
 end

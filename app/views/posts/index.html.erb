@@ -1,10 +1,9 @@
-<div class="row">
-	<div class="col-lg-6 col-lg-offset-3 text-center">
-		<% @posts.each do |post| %>
-			<div class="post-wrapper">
-				<h2 class="post-title"><%= link_to post.title, post %></h2>
-				<p class="post-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
-			</div>
-		<% end %>
-	</div>
+<div class="text-center posts-wrapper">
+	<% @posts.each do |post| %>
+		<div class="posts-wrapper">
+			<h2 class="posts-title"><%= link_to post.title, post %></h2>
+			<p class="posts-date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+			<text class="body-index"><%= raw post.body.truncate(250) %></text>
+		</div>
+	<% end %>
 </div>
