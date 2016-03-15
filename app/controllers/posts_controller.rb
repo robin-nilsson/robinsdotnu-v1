@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		@post = Post.find(params[:id])
+		@post = Post.friendly.find(params[:id])
 
 		if @post.update(params[:post].permit(:title, :body))
 			redirect_to @post
