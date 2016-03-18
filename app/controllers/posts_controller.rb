@@ -16,9 +16,9 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		if @post.save
-			redirect_to @post
+			redirect_to @post, success: 'The Post has been successfully published.'
 		else
-			render 'new'
+			render 'new', error: 'Something went wrong and the Post could not be updated.'
 		end
 	end
 
@@ -34,17 +34,19 @@ class PostsController < ApplicationController
 		@post = Post.friendly.find(params[:id])
 
 		if @post.update(params[:post].permit(:title, :body))
-			redirect_to @post
+			redirect_to @post, success: 'The Post has been successfully updated.'
 		else
-			render 'edit'
+			render 'edit', error: 'Something went wrong and the Post could not be updated.'
 		end
 	end
 
 	def destroy
-		@post = Post.find(params[:id])
-		@post.destroy
-
-		redirect_to posts_path
+		@post = Post.friendly.find(params[:id])
+		if @post.destroy
+			redirect_to posts_path, success: 'The Post has been successfully deleted.'
+		else
+			redirect_to posts_path, error: 'Something went wrong and the Post could not be deleted.'
+		end
 	end
 
 	private
