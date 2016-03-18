@@ -16,3 +16,4 @@
 //= require bootstrap
 //= require turbolinks
 //= require disqus_rails
+//= require tinymce-jquery
