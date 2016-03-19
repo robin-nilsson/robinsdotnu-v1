@@ -24,12 +24,19 @@
 	</div>
 </div>
 
+<div id="subtitle" class="row">
+	<div class="form-group col-lg-8 col-lg-offset-2 text-center">
+		<%= f.label :subtitle %>
+		<%= f.text_field :subtitle, class: "form-control" %>
+	</div>
+</div>
+
 <div class="form-group">
 	<%= f.label :body %><br>
 	<%= f.text_area :body, cols: 80, rows: 12, required: true, class: "test form-control tinymce" %><br>
 </div>
 
-<div class="form-group pull-left">
+<div id="resource-checkbox" class="form-group pull-left">
 	<%= f.label :resource %>
 	<%= f.check_box :resource %><br>
 </div>

@@ -1,17 +1,7 @@
-// $(document).on('ready page:load', function () {
-//    tinymce.remove();
-// });
+$(document).ready(function() {
+	$('#subtitle').hide();
 
-var ready;
-ready = function() {
-
-alert('test');
-  tinyMCE.remove();
-  tinyMCE.init({
-    selector: 'test'
-  });
-
-};
-
-$(document).ready(ready);
-$(document).on('page:load', ready);
+	$('#resource-checkbox').click(function() {
+			$('#subtitle').toggle(this.checked);
+	});
+});

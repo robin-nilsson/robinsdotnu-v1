@@ -17,3 +17,4 @@
 //= require turbolinks
 //= require disqus_rails
 //= require tinymce-jquery
+//= require posts
