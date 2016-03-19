@@ -1,5 +1,6 @@
+content_css: "application.scss"
 toolbar:
-  - styleselect | bold italic | undo redo
+  - styleselect | bold italic | undo redo | fontsizeselect | fontselect
   - image | link | codesample | preview | wordcount | media | code
 plugins:
   - image
@@ -10,3 +11,4 @@ plugins:
   - media
   - autosave
   - code
+font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n'
