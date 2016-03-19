@@ -33,7 +33,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.friendly.find(params[:id])
 
-		if @post.update(params[:post].permit(:title, :body))
+		if @post.update(params[:post].permit(:title, :body, :tag_list))
 			redirect_to @post, success: 'The Post has been successfully updated.'
 		else
 			render 'edit', error: 'Something went wrong and the Post could not be updated.'

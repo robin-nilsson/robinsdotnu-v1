@@ -1,0 +1,40 @@
+.item, .category-item {
+	padding: 30px 10px 60px 10px;
+	p, li {
+		font-size: 1.3em;
+	}
+}
+
+.item-company-title {
+	display: inline-block;
+	padding-right: 15px;
+}
+
+.item-personal-title {
+	color: gray;
+}
+
+.overview .category-title {
+    background-color: #b3003b;
+}
+
+.experience .category-title {
+    background-color: #ff6600;
+}
+
+.education .category-title {
+    background-color: #20b2aa;
+}
+
+.category-title {
+	font-size: 0.9em;
+	max-width: 150px;
+	text-align: center;
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: white;
+	position: relative;
+	left: -20px;
+	top: 0;
+	font-weight: 700;
+}
