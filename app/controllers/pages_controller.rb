@@ -5,4 +5,8 @@ class PagesController < ApplicationController
 
 	def resume
 	end
+
+	def resources
+		@posts = Post.all.where(:resource => 1).order('created_at DESC')
+	end
 end

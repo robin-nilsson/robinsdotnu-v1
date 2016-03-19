@@ -2,6 +2,7 @@ body {
 	font-family: 'Raleway', Lato !important;
 	h1 {
 		font-size: 46px;
+		margin-bottom: 0.01em;
 	}
 }
 
@@ -17,6 +18,11 @@ body {
 	margin-top: 14.5%;
 }
 
+body.mce-content-body {
+    font-size: 14px !important;
+    font-family: 'Raleway' !important;
+}
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-flatly";
@@ -28,3 +34,4 @@ body {
 @import "messages";
 @import "posts";
 @import "resume";
+@import "resources";

@@ -1,0 +1,8 @@
+<div id="resources" class="">
+	<% @posts.each do |post| %>
+	<div class="posts-wrapper">
+		<h1 class="posts-title"><%= link_to post.title, post %></h1>
+		<text class="body-index"><%= truncate(post.body, length: 250, separator: ' ', escape: false).html_safe %></text>
+	</div>
+	<% end %>
+</div>

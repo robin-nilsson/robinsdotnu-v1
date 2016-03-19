@@ -30,8 +30,13 @@
 </div>
 
 <div class="form-group pull-left">
+	<%= f.label :resource %>
+	<%= f.check_box :resource %><br>
+</div>
+<br><br>
+<div class="form-group pull-left" style="clear:both;">
 	<%= f.button f.object.new_record? ? ' Create Post' : ' Update Post', class: "fa fa-floppy-o btn btn-success" %>
 	<%= link_to " Cancel", params[:action] == 'new' ? posts_path : post_path, class: "fa fa-ban btn btn-danger" %>
 </div>
 <% end %>
-<%= tinymce %>
+<%= tinymce :content_css => asset_path('application.scss') %>
