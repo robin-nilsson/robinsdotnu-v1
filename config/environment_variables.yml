@@ -1,0 +1,8 @@
+development:
+  GMAIL_USERNAME: snokstyle@gmail.com
+  GMAIL_PASSWORD: sw33td00d
+  DISQUS_SHORT_NAME: robinsnu
+production:
+  GMAIL_USERNAME: snokstyle@gmail.com
+  GMAIL_PASSWORD: sw33td00d
+  DISQUS_SHORT_NAME: robinsnu
