@@ -1,8 +1,12 @@
-.item, .category-item {
+.item {
 	padding: 30px 10px 60px 10px;
 	p, li {
 		font-size: 1.3em;
 	}
+}
+
+.item-date {
+	font-size: 0.9em;
 }
 
 .item-company-title {
@@ -12,6 +16,10 @@
 
 .item-personal-title {
 	color: gray;
+}
+
+.item-company-details {
+	font-weight: bold;
 }
 
 .overview .category-title {
