@@ -14,8 +14,13 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap
-//= require turbolinks
 //= require disqus_rails
 //= require tinymce-jquery
 //= require posts
 //= require prism
+//= require turbolinks
+
+// Load Prism on page load for turbolinks.
+$(document).on('ready page:load', function() {
+    Prism.highlightAll();
+});
