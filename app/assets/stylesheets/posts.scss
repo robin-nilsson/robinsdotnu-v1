@@ -4,13 +4,11 @@ $date-color-light-gray: #9eafba;
 .posts-wrapper {
 	margin: -5em 0 10em 0;
 	border-bottom: $post-border-bottom;
-	.title {
-		margin: 0;
+	.posts-title {
+		font-weight: 500;
+		font-size: 40px;
 		a {
-			font-weight: 500;
 			text-decoration: none;
-			color: #2a2f35;
-			font-size: 1.5em;
 			&:hover {
 				color: #33acb7;
 			}
