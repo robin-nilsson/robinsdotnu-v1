@@ -23,7 +23,7 @@
 		</p>
 	</div>
 	<text class="body-show" id="post-body">
-		<%= raw @post.body %>
+		<%= raw @post.body.html_safe %>
 	</text>
 </div>
 <br><br><br>

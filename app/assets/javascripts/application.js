@@ -18,3 +18,4 @@
 //= require disqus_rails
 //= require tinymce-jquery
 //= require posts
+//= require prism
