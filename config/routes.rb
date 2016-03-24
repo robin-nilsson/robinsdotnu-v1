@@ -1,14 +1,17 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: "registrations"}
-  root 'pages#index'
+	devise_for :users, controllers: { registrations: "registrations"}
+	root 'pages#index'
 
-  get 'resume', to: 'pages#resume'
+	get 'resume', to: 'pages#resume'
 
-  get 'contact', to: 'messages#new', as: 'contact'
-  post 'contact', to: 'messages#create'
+	get 'contact', to: 'messages#new', as: 'contact'
+	post 'contact', to: 'messages#create'
 
-  get 'resources', to: 'pages#resources'
+	get 'resources', to: 'pages#resources'
 
-  resources :posts
-  get 'tags/:tag', to: 'posts#index', as: :tag
+	resources :posts
+	get 'tags/:tag', to: 'posts#index', as: :tag
+
+  # For Google: Routing /foo to display /public/baz/bar.html
+  get '/google6d634e18c55730c7.html', to: redirect('/google6d634e18c55730c7.html')
 end
