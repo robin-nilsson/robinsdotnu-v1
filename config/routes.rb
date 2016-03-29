@@ -12,6 +12,4 @@ Rails.application.routes.draw do
 	resources :posts
 	get 'tags/:tag', to: 'posts#index', as: :tag
 
-  # For Google: Routing /foo to display /public/baz/bar.html
-  get '/google6d634e18c55730c7.html', to: redirect('/google6d634e18c55730c7.html')
 end
