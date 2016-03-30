@@ -1,23 +1,37 @@
 <nav id='menu' class='navbar navbar-inverse'>
   <div class='container-fluid'>
     <div class="row">
-    <ul class='nav nav-pills navbar-right text-center'>
-        <li class="<%= active_class(root_path) %>">
-          <%= link_to 'Me', root_path, class: 'nav-link' %>
+    <ul class='nav nav-pills navbar-left text-center'>
+      <li>
+        <% if !user_signed_in? %>
+          <%= link_to '', new_user_session_path, class: 'fa fa-sign-in' %>
+        <% else %>
+          <%= link_to '', destroy_user_session_path, class: 'fa fa-sign-out' %>
+        <% end %>
+      </li>
+    </ul>
+    <ul class='nav nav-pills navbar-right text-center'> 
+      <li class="<%= active_class(root_path) %>">
+        <%= link_to 'Me', root_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_class(resume_path) %>">
+        <%= link_to 'Resume', resume_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_class(contact_path) %>">
+        <%= link_to 'Contact', contact_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_class(resources_path) %>">
+        <%= link_to 'Resources', resources_path, class: 'nav-link' %>
+      </li>
+      <li class="<%= active_class(posts_path) %>">
+        <%= link_to 'Blog', posts_path, class: 'nav-link' %>
+      </li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to '', new_post_path, class: 'fa fa-plus', data: { no_turbolink: true } %>
         </li>
-        <li class="<%= active_class(resume_path) %>">
-          <%= link_to 'Resume', resume_path, class: 'nav-link' %>
-        </li>
-        <li class="<%= active_class(contact_path) %>">
-          <%= link_to 'Contact', contact_path, class: 'nav-link' %>
-        </li>
-        <li class="<%= active_class(resources_path) %>">
-          <%= link_to 'Resources', resources_path, class: 'nav-link' %>
-        </li>
-        <li class="<%= active_class(posts_path) %>">
-          <%= link_to 'Blog', posts_path, class: 'nav-link' %>
-        </li>
-      </ul>
+      <% end %>
+    </ul>
     </div>
   </div>
 </nav>
