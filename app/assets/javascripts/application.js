@@ -32,6 +32,6 @@ $(document).on('ready page:load', function() {
 	'indent': 2,
 	'remove-initial-line-feed': false,
 	'tabs-to-spaces': 4,
-	'spaces-to-tabs': 4*/
-});
+	'spaces-to-tabs': 4
+});*/
 });
