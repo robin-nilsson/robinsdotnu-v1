@@ -5,7 +5,7 @@
 		<h1 class="posts-title"><%= link_to post.title, post %></h1>
 		<p class="tags">
 			<% if post.tags.any? %>
-			Tags: <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+				<i class="fa fa-tags"> <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></i>
 			<% end %>
 		</p>
 		<p class="posts-date"><%= post.created_at.strftime("%B %d, %Y") %></p>

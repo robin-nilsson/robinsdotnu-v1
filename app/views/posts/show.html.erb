@@ -6,7 +6,7 @@
 		</h1>
 
 		<p id="tags-show-post">
-			<%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+			<i class="fa fa-tags"> <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></i>
 		</p>
 
 		<p class="date" style="display: inline-block;">
@@ -16,10 +16,13 @@
 			<% else %>
 				<br>
 			<% end %>
-			<%= link_to ' Back', url_for(:back), class: "fa fa-arrow-left" %>
+			<!-- Back should link to /resources if coming from /resources, otherwise link back to /posts. -->
+			<%= url_for(:back) == @resources_url ? 
+															link_to(' Back', resources_path, class: "fa fa-arrow-left") : 
+															link_to(' Back', posts_path, class: "fa fa-arrow-left") %>
 			<% if user_signed_in? %>
-			| <%= link_to '', edit_post_path(@post), data: { no_turbolink: true }, class: "fa fa-pencil" %>
-			| <%= link_to '', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o" %>
+				| <%= link_to '', edit_post_path(@post), data: { no_turbolink: true }, class: "fa fa-pencil" %>
+				| <%= link_to '', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: "fa fa-trash-o" %>
 			<% end %>
 		</p>
 	</div>

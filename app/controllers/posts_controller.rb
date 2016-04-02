@@ -24,6 +24,9 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.friendly.find(params[:id])
+
+		# For back link
+		@resources_url = root_url + 'resources'
 	end
 
 	def edit

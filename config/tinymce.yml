@@ -1,7 +1,7 @@
 content_css: "application.scss"
 toolbar:
   - styleselect | bold italic | undo redo | fontsizeselect | fontselect
-  - image | link | codesample | preview | wordcount | media | code
+  - image | link | codesample | preview | wordcount | media | code | paste
 plugins:
   - image
   - link
@@ -11,4 +11,6 @@ plugins:
   - media
   - autosave
   - code
+  - paste
 font_formats: 'Arial=arial,helvetica,sans-serif;Courier New=courier new,courier,monospace;AkrutiKndPadmini=Akpdmi-n'
+paste_enable_default_filters: false
