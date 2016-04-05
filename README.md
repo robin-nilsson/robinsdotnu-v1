@@ -10,3 +10,4 @@ www.robins.nu
 * Code comments and refactoring.
 * Add portfolio/projects page and use thumbnail snapshots of website projects.
 * Profile picture (from facebook?) on the front page.
+* Friendly client error pages for 404, 500 etc.
