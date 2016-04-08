@@ -10,12 +10,7 @@
 		</p>
 
 		<p class="date" style="display: inline-block;">
-			Submitted <%= time_ago_in_words(@post.created_at) %> ago
-			<% if @post.updated_at > @post.created_at %>
-				- updated <%= time_ago_in_words(@post.updated_at) %> ago<br>
-			<% else %>
-				<br>
-			<% end %>
+			Submitted <%= time_ago_in_words(@post.created_at) %> ago<br>
 			<!-- Back should link to /resources if coming from /resources, otherwise link back to /posts. -->
 			<%= url_for(:back) == @resources_url ? 
 															link_to(' Back', resources_path, class: "fa fa-arrow-left") : 
